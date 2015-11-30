@@ -1,12 +1,83 @@
 <html>
 	<head>
-		<link rel="shortcut icon" type="image/gif" href="<!--INSERT IMG URL HERE>-->" />
+		<link rel="icon" type="image/png" href="https://kotajacob.github.io/images/favicon.png">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 		<style type="text/css">
 		
 		</style>
 	</head>
-	<body>
-		test text
+	<body onload="updateClock()">
+		<div class="keepcentered">
+			<center>
+				<font size=72>
+					<div id="time">
+					</div>
+				</font>
+			</center>
+			<p>
+				<center>
+					<table width="100%" border="0px">
+						<tr>
+							<td><b>Faves</b></td>
+							<td><b>Faves</b></td>
+							<td><b>Faves</b></td>
+							<td><b>Faves</b></td>
+							<td><b>Faves</b></td>
+						</tr>
+						<tr>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+							<td><a href="http://www.reddit.com">Reddit</a></td>
+						</tr>
+					</table>
+					<br>
+				</center>
+			</p>
+		</div>	
 	</body>
+	<script>
+		function updateClock()
+		{
+			Date.getMinutesTwoDigits = function()
+			{
+				var retval = now.getMinutes();
+				if (retval < 10) return ("0" + retval.toString());
+				else return retval.toString();
+			}
+			Date.getHoursModTwelve = function()
+			{
+				var retval = now.getHours();
+				retval = retval%12;
+				if (retval == 0) retval = 12;
+				return retval;
+			}
+			var now = new Date(),
+			time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
+			document.getElementById('time').innerHTML = ["", time].join('');
+			setTimeout(updateClock, 1000);
+		}
+	</script>
 </html>
