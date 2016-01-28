@@ -4,9 +4,10 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 		<style type="text/css">
 			body {
-				background: #093145
+				background-image: url("back.png");
 			}
 			.keepcentered {
+				border-radius: 25px;
 				position : absolute;
 				left : 50%;
 				top : 50%;
@@ -15,12 +16,11 @@
 				margin-left : -340px;
 				margin-top : -150px;
 				font-weight : 400;
-				background: #0C374D;
+				background: rgba(0, 0, 0, 0.5);
 			}
 			body {
-				font-family: 'Roboto', sans-serif;
-				font-style : normal;
-				color : #EAF3FB;
+				font-family: 'Inconsolata', sans-serif;
+				color : white;
 				margin : 5px;
 			}
 			td {
@@ -29,17 +29,24 @@
 			td, tr {
 				width: 20%;
 				text-align: center;
+				font-size: 20px;
 			}
 			a {
-				font-weight: 100;
-				color : #EAF3FB;
+				color : white;
+				-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+				-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+				-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+				transition: color 0.2s ease, border-bottom-color 0.2s ease;
+				text-decoration: none;
+			}
+			a {
+				font-size: 16px;
 			}
 			a:hover {
-				color : #EAF3FB;
+				color:#E81123;
 			}
 			a:link {
 				text-decoration : none;
-				text-shadow: 0px 0px 0px #EAF3FB;
 			}
 		</style>
 	</head>
@@ -85,10 +92,9 @@
 							<td><a href="http://lighterpack.com/#">LightPack</a></td>
 						</tr>
 					</table>
-					<br>
 				</center>
 			</p>
-		</div>	
+		</div>
 	</body>
 	<script>
 		function updateClock()
