@@ -1,121 +1,130 @@
 <html>
-	<head>
-		<link rel="icon" type="image/png" href="https://kotajacob.github.io/images/favicon.png">
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
-		<style type="text/css">
-			body {
-				background-color: #333;
-			}
-			.keepcentered {
-				border-radius: 25px;
-				position : absolute;
-				left : 50%;
-				top : 50%;
-				width : 680px;
-				height : 300px;
-				margin-left : -340px;
-				margin-top : -150px;
-				font-weight : 400;
-				background: #292929;
-			}
-			body {
-				font-family: sans-serif;
-				color : white;
-				margin : 5px;
-			}
-			td {
-				padding-top: 10px;
-			}
-			td, tr {
-				width: 20%;
-				text-align: center;
-				font-size: 20px;
-			}
-			a {
-				color : white;
-				-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-				-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-				-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-				transition: color 0.2s ease, border-bottom-color 0.2s ease;
-				text-decoration: none;
-			}
-			a {
-				font-size: 16px;
-			}
-			a:hover {
-				color:#E81123;
-			}
-			a:link {
-				text-decoration : none;
-			}
-		</style>
-	</head>
-	<body onload="updateClock()">
-		<div class="keepcentered">
-			<center>
-				<font size=72>
+
+<head>
+	<link rel="icon" type="image/png" href="https://kotajacob.github.io/images/favicon.png">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {
+			background-color: #333;
+		}
+
+		.keepcentered {
+			border-radius: 25px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 680px;
+			height: 300px;
+			margin-left: -340px;
+			margin-top: -150px;
+			font-weight: 400;
+			background: #292929;
+		}
+
+		body {
+			font-family: sans-serif;
+			color: white;
+			margin: 5px;
+		}
+
+		td {
+			padding-top: 10px;
+		}
+
+		td,
+		tr {
+			width: 20%;
+			text-align: center;
+			font-size: 20px;
+		}
+
+		a {
+			color: white;
+			-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+			-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+			-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+			transition: color 0.2s ease, border-bottom-color 0.2s ease;
+			text-decoration: none;
+		}
+
+		a {
+			font-size: 16px;
+		}
+
+		a:hover {
+			color: #E81123;
+		}
+
+		a:link {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body onload="updateClock()">
+	<div class="keepcentered">
+		<center>
+			<font size=72>
 					<div id="time">
 					</div>
 				</font>
+		</center>
+		<p>
+			<center>
+				<table width="100%" border="0px">
+					<tr>
+						<td><b>Me</b></td>
+						<td><b>Fun</b></td>
+						<td><b>Forum</b></td>
+						<td><b>Learn</b></td>
+					</tr>
+					<tr>
+						<td><a href="https://app.tutanota.de/#box">Tuta</a></td>
+						<td><a href="https://voat.co/">Voat</a></td>
+						<td><a href="https://stackexchange.com/">StackExchange</a></td>
+						<td><a href="https://news.ycombinator.com/">HackerNews</a></td>
+					</tr>
+					<tr>
+						<td><a href="http://kotajacob.tk/owncloud/index.php/apps/files/">Owncloud</a></td>
+						<td><a href="https://soundcloud.com">Soundcloud</a></td>
+						<td><a href="https://gitlab.com/">Gitlab</a></td>
+						<td><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></td>
+						<td><a href="https://www.youtube.com/">Youtube</a></td>
+						<td><a href="https://github.com/">Github</a></td>
+						<td><a href="https://wiki.archlinux.org/">ArchWiki</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://drive.google.com/drive/my-drive">Drive</a></td>
+						<td><a href="https://pcpartpicker.com/">PcParts</a></td>
+						<td><a href="https://slashdot.org/">Slashdot</a></td>
+						<td><a href="http://www.wolframalpha.com/">Wolfram</a></td>
+					</tr>
+				</table>
 			</center>
-			<p>
-				<center>
-					<table width="100%" border="0px">
-						<tr>
-							<td><b>Me</b></td>
-							<td><b>Fun</b></td>
-							<td><b>Forum</b></td>
-							<td><b>Learn</b></td>
-						</tr>
-						<tr>
-							<td><a href="https://app.tutanota.de/#box">Tuta</a></td>
-							<td><a href="https://voat.co/">Voat</a></td>
-							<td><a href="https://stackexchange.com/">StackExchange</a></td>
-							<td><a href="https://news.ycombinator.com/">HackerNews</a></td>
-						</tr>
-						<tr>
-							<td><a href="http://kotajacob.tk/owncloud/index.php/apps/files/">Owncloud</a></td>
-							<td><a href="https://soundcloud.com">Soundcloud</a></td>
-							<td><a href="https://gitlab.com/">Gitlab</a></td>
-							<td><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></td>
-						</tr>
-						<tr>
-							<td><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></td>
-							<td><a href="https://www.youtube.com/">Youtube</a></td>
-							<td><a href="https://github.com/">Github</a></td>
-							<td><a href="https://wiki.archlinux.org/">ArchWiki</a></td>
-						</tr>
-						<tr>
-							<td><a href="https://drive.google.com/drive/my-drive">Drive</a></td>
-							<td><a href="https://pcpartpicker.com/">PcParts</a></td>
-							<td><a href="https://slashdot.org/">Slashdot</a></td>
-							<td><a href="http://www.wolframalpha.com/">Wolfram</a></td>
-						</tr>
-					</table>
-				</center>
-			</p>
-		</div>
-	</body>
-	<script>
-		function updateClock()
-		{
-			Date.getMinutesTwoDigits = function()
-			{
-				var retval = now.getMinutes();
-				if (retval < 10) return ("0" + retval.toString());
-				else return retval.toString();
-			}
-			Date.getHoursModTwelve = function()
-			{
-				var retval = now.getHours();
-				retval = retval%12;
-				if (retval == 0) retval = 12;
-				return retval;
-			}
-			var now = new Date(),
-			time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
-			document.getElementById('time').innerHTML = ["", time].join('');
-			setTimeout(updateClock, 1000);
+		</p>
+	</div>
+</body>
+<script>
+	function updateClock() {
+		Date.getMinutesTwoDigits = function() {
+			var retval = now.getMinutes();
+			if (retval < 10) return ("0" + retval.toString());
+			else return retval.toString();
 		}
-	</script>
+		Date.getHoursModTwelve = function() {
+			var retval = now.getHours();
+			retval = retval % 12;
+			if (retval == 0) retval = 12;
+			return retval;
+		}
+		var now = new Date(),
+			time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
+		document.getElementById('time').innerHTML = ["", time].join('');
+		setTimeout(updateClock, 1000);
+	}
+</script>
+
 </html>
