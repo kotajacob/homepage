@@ -1,136 +1,340 @@
-<!DOCTYPE html>
-<!-- Website by kotajacob -->
-<html>
+<!doctype html>
 
-<head>
-	<title>Kotajacob's Homepage</title>
-	<html lang="en-US">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" type="image/png" href="https://kotajacob.github.io/images/favicon.png">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
-	<style type="text/css">
-		body {
-			background-color: #333;
-		}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 
-		.keepcentered {
-			border-radius: 25px;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			width: 680px;
-			height: 300px;
-			margin-left: -340px;
-			margin-top: -150px;
-			font-weight: 400;
-			background: #292929;
-		}
+<title>~</title>
 
-		body {
-			font-family: sans-serif;
-			color: white;
-			margin: 5px;
-		}
+<script>WebFontConfig={google:{families:['Roboto:300:latin']}};</script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
 
-		td {
-			padding-top: 10px;
-		}
+<style type="text/css">
+  body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #EFF1F5;
+    background-color: #2B303B;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
 
-		td,
-		tr {
-			width: 20%;
-			text-align: center;
-			font-size: 20px;
-		}
+  main {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 90%;
+    max-width: 310px;
+    margin: 0 auto;
+    transform: translateY(-100px);
+    text-align: center;
+  }
 
-		a {
-			color: white;
-			-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-			-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-			-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-			transition: color 0.2s ease, border-bottom-color 0.2s ease;
-			text-decoration: none;
-		}
+  time {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    letter-spacing: 6px;
+  }
 
-		a {
-			font-size: 16px;
-		}
+  input,
+  input:focus {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 
-		a:hover {
-			color: #0cd9ba;
-		}
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    transition: 0.5s;
+    border-radius: 2px;
+    background: #EFF1F5;
+    color: #2B303B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+  }
 
-		a:link {
-			text-decoration: none;
-		}
-	</style>
-</head>
+  ul,
+  li {
+    padding: 0;
+    list-style: none;
+  }
 
-<body onload="updateClock()">
-	<div class="keepcentered">
-		<center>
-			<font size=72>
-					<div id="time">
-					</div>
-				</font>
-		</center>
-		<p>
-			<center>
-				<table width="100%" border="0px">
-					<tr>
-						<td><b>Me</b></td>
-						<td><b>Fun</b></td>
-						<td><b>Forum</b></td>
-						<td><b>Learn</b></td>
-					</tr>
-					<tr>
-						<td><a href="https://app.tutanota.de/#box">Tuta</a></td>
-						<td><a href="https://www.reddit.com/">Reddit</a></td>
-						<td><a href="https://stackexchange.com/">StackExchange</a></td>
-						<td><a href="https://news.ycombinator.com/">HackerNews</a></td>
-					</tr>
-					<tr>
-						<td><a href="http://kotajacob.tk/owncloud/index.php/apps/files/">Owncloud</a></td>
-						<td><a href="https://soundcloud.com">Soundcloud</a></td>
-						<td><a href="https://gitlab.com/">Gitlab</a></td>
-						<td><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></td>
-					</tr>
-					<tr>
-						<td><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></td>
-						<td><a href="https://www.youtube.com/">Youtube</a></td>
-						<td><a href="https://github.com/">Github</a></td>
-						<td><a href="https://wiki.archlinux.org/">ArchWiki</a></td>
-					</tr>
-					<tr>
-						<td><a href="https://drive.google.com/drive/my-drive">Drive</a></td>
-						<td><a href="https://pcpartpicker.com/">PcParts</a></td>
-						<td><a href="https://slashdot.org/">Slashdot</a></td>
-						<td><a href="http://www.wolframalpha.com/">Wolfram</a></td>
-					</tr>
-				</table>
-			</center>
-		</p>
-	</div>
-</body>
+  .overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 200ms;
+    background: #2B303B;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    overflow: auto;
+  }
+
+  .overlay[data-toggled='true'] {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .lists {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+
+  .category {
+    width: 160px;
+    margin: 10px;
+  }
+
+  .category-name {
+    margin: 0;
+    padding: 14px;
+    border-radius: 2px 2px 0 0;
+    background: #8FA1B3;
+    color: #EFF1F5;
+    font-size: .7rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .command {
+    transition: background 200ms;
+    background: #EFF1F5;
+  }
+
+  .command:hover {
+    background: #EFF1F5;
+  }
+
+  .command:nth-child(even) {
+    background: #EFF1F5;
+  }
+
+  .command:nth-child(even):hover {
+    background: #EFF1F5;
+  }
+
+  .command:last-of-type {
+    border-radius: 0 0 2px 2px;
+  }
+
+  .command a {
+    display: block;
+    padding: 14px 12px;
+    color: #65737E;
+    font-size: .8rem;
+    line-height: 1.3rem;
+    text-decoration: none;
+  }
+
+  .command-key {
+    display: block;
+    width: 32px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 2px;
+    background: #dddee2;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+  }
+
+  @media (min-width: 740px) {
+    .overlay {
+      align-items: center;
+    }
+  }
+</style>
+
+<main>
+  <time id="js-clock"></time>
+  <form id="js-search-form" autocomplete="off">
+    <input id="js-search-input" type="text" autofocus>
+  </form>
+</main>
+
+<aside id="js-overlay" class="overlay">
+  <ul id="js-lists" class="lists"></ul>
+</aside>
+
 <script>
-	function updateClock() {
-		Date.getMinutesTwoDigits = function() {
-			var retval = now.getMinutes();
-			if (retval < 10) return ("0" + retval.toString());
-			else return retval.toString();
-		}
-		Date.getHoursModTwelve = function() {
-			var retval = now.getHours();
-			retval = retval % 12;
-			if (retval == 0) retval = 12;
-			return retval;
-		}
-		var now = new Date(),
-			time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
-		document.getElementById('time').innerHTML = ["", time].join('');
-		setTimeout(updateClock, 1000);
-	}
-</script>
+  'use strict';
 
-</html>
+  var config = {
+    categories: [
+      { name: "Tools", commands: [
+        { key: 'd', name: 'Drive', url: 'https://drive.google.com/drive', search: '/search?q=' },
+        { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
+        { key: 's', name: 'StackExchange', url: 'https://stackexchange.com/', search: '/search?q=' },
+      ] },
+      { name: "News", commands: [
+        { key: 'h', name: 'Hacker News', url: 'https://hn.algolia.com', search: '/?query=' },
+        { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/search?q=' },
+      ] },
+      { name: "Social", commands: [
+        { key: 'w', name: 'Wire', url: 'https://app.wire.com', search: '/' },
+        { key: 'i', name: 'Inbox', url: 'https://inbox.google.com', search: '/search/' },
+        { key: 'f', name: 'Facebook', url: 'https://www.facebook.com', search: '/search/top/?q=' },
+      ] },
+      { name: "Media", commands: [
+        { key: 'S', name: 'SoundCloud', url: 'https://soundcloud.com', search: '/search?q=' },
+        { key: 't', name: 'Twitch', url: 'https://www.twitch.tv/directory/following' },
+        { key: 'y', name: 'YouTube', url: 'https://www.youtube.com', search: '/weather?search_query=' },
+        { key: 'Y', name: 'YTS', url: 'https://yts.ag', search: '/browse-movies/' },
+      ] },
+      { name: "Education", commands: [
+        { key: 'a', name: 'ArchWiki', url: 'https://wiki.archlinux.org', search: '/index.php?title=Special%3ASearch&search=' },
+        { key: 'k', name: 'KhanAcademy', url: 'https://www.khanacademy.org', search: '/search?page_search_query=' },
+        { key: 'W', name: 'Wikipedia', url: 'https://en.wikipedia.org', search: '/wiki/' },
+      ] },
+
+      { name: "Shopping", commands: [
+        { key: 'A', name: 'Amazon', url: 'https://www.amazon.com', search: '/s/?field-keywords=' },
+        { key: 'c', name: 'Craigslist', url: 'https://portland.craigslist.org', search: '/search/sss?query='},
+        { key: 'm', name: 'Massdrop', url: 'https://www.massdrop.com', search: '/' },
+      ] },
+    ],
+
+    // if none of the keys are matched, this is used for searching
+    defaultSearch: 'https://www.google.com/search?q=',
+
+    // the delimiter between the key and your search query
+    // e.g. to search GitHub for potatoes you'd type "g:potatoes"
+    searchDelimiter: ':'
+  };
+
+  function $(s) {
+    return document.querySelector(s);
+  };
+
+  var Clock = (function() {
+    var clock = $('#js-clock');
+
+    function pad(num) {
+      return ('0' + num.toString()).slice(-2);
+    }
+
+    function setTime() {
+      var date = new Date();
+      clock.innerHTML = pad(date.getHours()) + ' ' + pad(date.getMinutes());
+    }
+
+    setTime();
+    setInterval(setTime, 1000);
+  })();
+
+  var Help = (function(config) {
+    var charRegex = /[a-zA-Z0-9-_ ]/;
+    var head = $('head');
+    var overlay = $('#js-overlay');
+    var lists = $('#js-lists');
+    var categoryItems = '';
+
+    config.categories.forEach(function(category) {
+      var commandItems = '';
+
+      category.commands.forEach(function(command) {
+        var prerenderLink = '<link rel="prerender" href="' + command.url + '">';
+        head.insertAdjacentHTML('beforeend', prerenderLink);
+
+        commandItems += (
+          '<li class="command">' +
+            '<a href="' + command.url + '">' +
+              '<span class="command-key">' + command.key + '</span>' +
+              '<span class="command-name">' + command.name + '</span>' +
+            '</a>' +
+          '</li>'
+        );
+      });
+
+      lists.insertAdjacentHTML(
+        'beforeend',
+        '<li class="category">' +
+          '<h2 class="category-name">' + category.name + '</h2>' +
+          '<ul>' + commandItems + '</ul>' +
+        '</li>'
+      );
+    });
+
+    document.addEventListener('keydown', function(event) {
+      var isEscape = event.keyCode === 27;
+      var isAlphaNum = charRegex.test(String.fromCharCode(event.keyCode));
+
+      if (isEscape || isAlphaNum) {
+        overlay.removeAttribute('data-toggled');
+        Form.focus();
+      }
+    });
+
+    return {
+      toggle: function() {
+        var toggle = overlay.getAttribute('data-toggled') !== 'true';
+        overlay.setAttribute('data-toggled', toggle);
+      }
+    };
+  })(config);
+
+  var Form = (function(config) {
+    var urlRegex = /(\b(https?|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i;
+    var searchForm = $('#js-search-form');
+    var searchInput = $('#js-search-input');
+
+    searchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var q = searchInput.value.trim();
+
+      if (q === '' || q === '?') {
+        Help.toggle();
+        searchInput.value = '';
+      } else {
+        var qSplit = q.split(config.searchDelimiter);
+        var qIsUrl = q.match(new RegExp(urlRegex));
+        var redirect = '';
+
+        if (qIsUrl) redirect = q;
+        else redirect = config.defaultSearch + encodeURIComponent(q);
+
+        config.categories.forEach(function(category) {
+          category.commands.forEach(function(command) {
+            if (qSplit[0] === command.key) {
+              if (qSplit[1] && command.search) {
+                qSplit.shift();
+                var search = encodeURIComponent(qSplit[0].trim());
+                redirect = command.url + command.search + search;
+              } else {
+                redirect = command.url;
+              }
+            }
+          });
+        });
+
+        window.location.href = redirect;
+      }
+    }, false);
+
+    return {
+      focus: function() {
+        searchInput.focus();
+      }
+    };
+  })(config);
+</script>
