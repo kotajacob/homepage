@@ -181,8 +181,8 @@
   var config = {
     categories: [
       { name: "Tools", commands: [
-				{ key: 'k', name: 'Kotacloud', url: 'https://data.kotajacob.tk/', search: '/' },
-        { key: 'gi', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
+        { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
+        { key: 'kc', name: 'Kotacloud', url: 'https://data.kotajacob.tk/', search: '/' },
         { key: 'gl', name: 'GitLab', url: 'https://gitlab.com', search: '/search?utf8=✓&search=' },
         { key: 'st', name: 'StackExchange', url: 'https://stackexchange.com', search: '/search?q=' },
         { key: 'wo', name: 'Wolfram Alpha', url: 'https://www.wolframalpha.com', search: '/input/?i=' },
@@ -190,9 +190,9 @@
       ] },
       { name: "News", commands: [
         { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/r/' },
+        { key: 'ko', name: 'Kota', url: 'http://www.kotajacob.tk', search: '/' },
         { key: 'ha', name: 'Hacker News', url: 'https://hn.algolia.com', search: '/?query=' },
         { key: 'sl', name: 'Slashdot', url: 'https://slashdot.org', search: '/index2.pl?fhfilter=' },
-        { key: 'ko', name: 'Kota', url: 'http://www.kotajacob.tk', search: '/' },
       ] },
       { name: "Social", commands: [
         { key: 'w', name: 'Wire', url: 'https://app.wire.com', search: '/' },
@@ -201,12 +201,12 @@
         { key: 'fa', name: 'Facebook', url: 'https://www.facebook.com', search: '/search/top/?q=' },
       ] },
       { name: "Media", commands: [
-        { key: 's', name: 'SoundCloud', url: 'https://soundcloud.com', search: '/search?q=' },
-        { key: 'tw', name: 'Twitch', url: 'https://www.twitch.tv/directory/following' },
-        { key: 'im', name: 'IMDB', url: 'http://www.imdb.com', search: '/find?ref_=nv_sr_fn&q=' },
-        { key: 'yo', name: 'YouTube', url: 'https://www.youtube.com', search: '/weather?search_query=' },
         { key: 'yt', name: 'YTS', url: 'https://yts.ag', search: '/browse-movies/' },
-        { key: 'pi', name: 'PirateBay', url: 'https://thepiratebay.org', search: '/search/' },
+        { key: 'km', name: 'Kotamedia', url: 'media.kotajacob.tk', search: '/' },
+        { key: 'im', name: 'IMDB', url: 'http://www.imdb.com', search: '/find?ref_=nv_sr_fn&q=' },
+        { key: 'tw', name: 'Twitch', url: 'https://www.twitch.tv/directory/following' },
+        { key: 'yo', name: 'YouTube', url: 'https://www.youtube.com', search: '/weather?search_query=' },
+        { key: 's', name: 'SoundCloud', url: 'https://soundcloud.com', search: '/search?q=' },
       ] },
       { name: "Education", commands: [
         { key: 'a', name: 'ArchWiki', url: 'https://wiki.archlinux.org', search: '/index.php?title=Special%3ASearch&search=' },
@@ -218,14 +218,13 @@
         { key: 'm', name: 'Massdrop', url: 'https://www.massdrop.com', search: '/' },
         { key: 'pc', name: 'Pcpartpicker', url: 'https://pcpartpicker.com/', search: '/search/?cc=us&q=' },
         { key: 'am', name: 'Amazon', url: 'https://www.amazon.com', search: '/s/?field-keywords=' },
-		{ key: 'li', name: 'Lighter Pack', url: 'https://lighterpack.com/#' },
+        { key: 'li', name: 'Lighter Pack', url: 'https://lighterpack.com/#' },
         { key: 'ca', name: 'Cash Card', url: 'https://cardholder.globalcashcard.com/index.cfm', search: ''},
       ] },
     ],
 
     // if none of the keys are matched, this is used for searching
-    defaultSearch: 'https://www.google.com/search?q=',
-
+    defaultSearch: 'https://duckduckgo.com/?q=',
     // the delimiter between the key and your search query
     // e.g. to search GitHub for potatoes you'd type "g:potatoes"
     searchDelimiter: ':'
