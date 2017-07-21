@@ -12,179 +12,26 @@
 #----------------------------------#
 -->
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
+<head>
+	<title>~</title>
 
-<title>~</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script>WebFontConfig={google:{families:['Roboto:300:latin']}};</script>
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
+	<link rel="stylesheet" href="style.css">
 
-<style type="text/css">
-  body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    color: #EFF1F5;
-    background-color: #2B303B;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-  }
-
-  main {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    width: 90%;
-    max-width: 310px;
-    margin: 0 auto;
-    transform: translateY(-100px);
-    text-align: center;
-  }
-
-  time {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 5rem;
-    letter-spacing: 6px;
-  }
-
-  input,
-  input:focus {
-    margin: 0;
-    border: 0;
-    outline: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-
-  input {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 12px;
-    transition: 0.5s;
-    border-radius: 2px;
-    background: #EFF1F5;
-    color: #2B303B;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-  }
-
-  ul,
-  li {
-    padding: 0;
-    list-style: none;
-  }
-
-  .overlay {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    transition: 200ms;
-    background: #2B303B;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1;
-    overflow: auto;
-  }
-
-  .overlay[data-toggled='true'] {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .lists {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: auto;
-  }
-
-  .category {
-    width: 160px;
-    margin: 10px;
-  }
-
-  .category-name {
-    margin: 0;
-    padding: 14px;
-    border-radius: 2px 2px 0 0;
-    background: #8FA1B3;
-    color: #EFF1F5;
-    font-size: .7rem;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  .command {
-    transition: background 200ms;
-    background: #EFF1F5;
-  }
-
-  .command:hover {
-    background: #EFF1F5;
-  }
-
-  .command:nth-child(even) {
-    background: #EFF1F5;
-  }
-
-  .command:nth-child(even):hover {
-    background: #EFF1F5;
-  }
-
-  .command:last-of-type {
-    border-radius: 0 0 2px 2px;
-  }
-
-  .command a {
-    display: block;
-    padding: 14px 12px;
-    color: #65737E;
-    font-size: .8rem;
-    line-height: 1.3rem;
-    text-decoration: none;
-  }
-
-  .command-key {
-    display: block;
-    width: 32px;
-    margin-right: 10px;
-    float: left;
-    border-radius: 2px;
-    background: #dddee2;
-    font-family: 'Courier New', monospace;
-    text-align: center;
-  }
-
-  @media (min-width: 740px) {
-    .overlay {
-      align-items: center;
-    }
-  }
-</style>
-
+	<script>WebFontConfig={google:{families:['Roboto:300:latin']}};</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
+</head>
 <main>
-  <time id="js-clock"></time>
-  <form id="js-search-form" autocomplete="off">
-    <input id="js-search-input" type="text" autofocus>
-  </form>
+	<time id="js-clock"></time>
+	<form id="js-search-form" autocomplete="off">
+		<input id="js-search-input" type="text" autofocus>
+	</form>
 </main>
 
 <aside id="js-overlay" class="overlay">
-  <ul id="js-lists" class="lists"></ul>
+	<ul id="js-lists" class="lists"></ul>
 </aside>
 
 <script>
@@ -208,8 +55,9 @@
       { name: "Social", commands: [
         { key: 'w', name: 'Wire', url: 'https://app.wire.com', search: '/' },
         { key: 'pr', name: 'ProtonMail', url: 'https://mail.protonmail.com/inbox', search: '/' },
+		{ key: 'gm', name: 'Gmail', url: 'https://mail.google.com', search: '/#search/' },
         { key: 'ma', name: 'Mastodon', url: 'https://mastodon.technology', search: '/search/top/?q=' },
-        { key: 'gm', name: 'Gmail', url: 'https://mail.google.com', search: '/#search/' },
+		{ key: 'le', name: 'Level1Techs', url: 'https://forum.level1techs.com/', search: '/search?q=' },
       ] },
       { name: "Media", commands: [
         { key: 't', name: 'TorrentProject', url: 'https://torrentproject.se/', search: '/?t=' },

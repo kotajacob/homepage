@@ -1,0 +1,154 @@
+@import url('file:///home/kota/.cache/wal/colors.css');
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: var(--color7) !important;
+	background-color: var(--color0) !important;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+main {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+	width: 90%;
+	max-width: 310px;
+	margin: 0 auto;
+	transform: translateY(-100px);
+	text-align: center;
+}
+
+time {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 5rem;
+	letter-spacing: 6px;
+}
+
+input,
+input:focus {
+	margin: 0;
+	border: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 12px;
+	transition: 0.5s;
+	border-radius: 2px;
+	background: var(--color7) !important;
+	color: var(--color0) !important;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1rem;
+}
+
+ul,
+li {
+	padding: 0;
+	list-style: none;
+}
+
+.overlay {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	transition: 200ms;
+	background: var(--color0) !important;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1;
+	overflow: auto;
+}
+
+.overlay[data-toggled='true'] {
+	visibility: visible;
+	opacity: 1;
+}
+
+.lists {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	overflow: auto;
+}
+
+.category {
+	width: 160px;
+	margin: 10px;
+}
+
+.category-name {
+	margin: 0;
+	padding: 14px;
+	border-radius: 2px 2px 0 0;
+	background: var(--color1) !important;
+	color: var(--color7) !important;
+	font-size: .7rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.command {
+	transition: background 200ms;
+	background: var(--color7) !important;
+}
+
+.command:hover {
+	background: var(--color7) !important;
+}
+
+.command:nth-child(even) {
+	background: var(--color7) !important;
+}
+
+.command:nth-child(even):hover {
+	background: var(--color7) !important;
+}
+
+.command:last-of-type {
+	border-radius: 0 0 2px 2px;
+}
+
+.command a {
+	display: block;
+	padding: 14px 12px;
+	color: var(--color0) !important;
+	font-size: .8rem;
+	line-height: 1.3rem;
+	text-decoration: none;
+}
+
+.command-key {
+	display: block;
+	width: 32px;
+	margin-right: 10px;
+	float: left;
+	border-radius: 2px;
+	background: var(--color4) !important;
+	font-family: 'Hack', monospace;
+	text-align: center;
+}
+
+@media (min-width: 740px) {
+	.overlay {
+		align-items: center;
+	}
+}
