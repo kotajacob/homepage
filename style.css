@@ -8,7 +8,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	color: var(--color7) !important;
+	color: var(--color15) !important;
 	background-color: var(--color0) !important;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
@@ -48,7 +48,7 @@ input {
 	padding: 12px;
 	transition: 0.5s;
 	border-radius: 2px;
-	background: var(--color7) !important;
+	background: var(--color15) !important;
 	color: var(--color0) !important;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.1rem;
@@ -100,7 +100,7 @@ li {
 	padding: 14px;
 	border-radius: 2px 2px 0 0;
 	background: var(--color1) !important;
-	color: var(--color7) !important;
+	color: var(--color15) !important;
 	font-size: .7rem;
 	text-transform: uppercase;
 	text-align: center;
@@ -108,19 +108,19 @@ li {
 
 .command {
 	transition: background 200ms;
-	background: var(--color7) !important;
+	background: var(--color15) !important;
 }
 
 .command:hover {
-	background: var(--color7) !important;
+	background: var(--color15) !important;
 }
 
 .command:nth-child(even) {
-	background: var(--color7) !important;
+	background: var(--color15) !important;
 }
 
 .command:nth-child(even):hover {
-	background: var(--color7) !important;
+	background: var(--color15) !important;
 }
 
 .command:last-of-type {
@@ -142,7 +142,7 @@ li {
 	margin-right: 10px;
 	float: left;
 	border-radius: 2px;
-	background: var(--color4) !important;
+	background: var(--color7) !important;
 	font-family: 'Hack', monospace;
 	text-align: center;
 }
