@@ -67,8 +67,6 @@ copy the address and set New Tab Redirect to open that address
 
 ![Enter menu](https://i.imgur.com/My6CgaE.png)
 
-![Enter menu](https://i.imgur.com/My6CgaE.png)
-
 ![Go to subreddit](https://i.imgur.com/4hpmbYO.png)
 
 ![Search github for linux](https://i.imgur.com/GL67ohK.png)
