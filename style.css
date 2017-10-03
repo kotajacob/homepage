@@ -115,14 +115,6 @@ li {
 	background: var(--color15) !important;
 }
 
-.command:nth-child(even) {
-	background: var(--color15) !important;
-}
-
-.command:nth-child(even):hover {
-	background: var(--color15) !important;
-}
-
 .command:last-of-type {
 	border-radius: 0 0 2px 2px;
 }
@@ -142,7 +134,8 @@ li {
 	margin-right: 10px;
 	float: left;
 	border-radius: 2px;
-	background: var(--color13) !important;
+	color: var(--color15) !important;
+	background: var(--color2) !important;
 	font-family: 'Hack', monospace;
 	text-align: center;
 }
